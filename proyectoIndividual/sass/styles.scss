@@ -1,32 +1,95 @@
-// VARIABLES
-$fuenteTitulo: 'Abril Fatface';
-$fuenteTitulos2: 'Rubik';
-$fuenteTextos: 'Lato';
-
-// VARIABLES DE COLORES
-$amarillo: #fadd6c;
-$azulnoche: #1d1e73;
-$azul: #191ce3;
-$verde: #9c872A;
-$blanco: white;
-$negro: #000;
-$amarilloclaro:#fae482;
-$morado: #5A70fB;
-
-/* font-family: 'Abril Fatface', cursive;
-
-font-family: 'Lato', sans-serif;
-
-font-family: 'Rubik', sans-serif; */
+@use 'libreria' as l;
 *{
     box-sizing: border-box;
 }
 body{
-    background-color: $amarilloclaro;
+    margin: 0;
+    background-color: l.$amarilloclaro;
+    color: l.$blanco;
+    font-family: map-get(l.$fuentes, texto);
 }
 .header,
 .footer{
-    height: 10em;
-    background-color: $azulnoche;
+    height: 20rem;
+    background-color: l.$azulnoche;
+}
+.header__nav{
+    height: 5rem;
+    background-color: #5a70fb4b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    &_logo{
+        height: 3rem;
+        width: 3rem;
+        background-color: #9c872A;
+    }
+    &_lista{ 
+        width: 30%;
+        height: 3rem;
+        border:l.$border;
+        &_ul{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            list-style: l.$decoracion;
+        }
+        &_item{
+            &_link{
+                text-decoration: l.$decoracion;
+                color: #9c872A;
+            }
+        }
+    }    
+}
+.header__banner{
+    height: 15rem;
+    border-top: 2px solid#000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &_link{
+        text-decoration: l.$decoracion;
+        color: #9c872A;
+        &_title{
+            font-family: map-get(l.$fuentes, titulo);
+            font-size: 7em;
+            border: l.$border;
+        }
+    }
+}
+.main__section1,
+.main__section2,
+.main__section3{
+    height: 50rem;
+    border: l.$border;
+}
+.main__section1{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    &_title{
+        border: l.$border;
+        font-family: map-get(l.$fuentes, titulo);
+        font-size: 2em;
+        &_link{
+            text-decoration: l.$decoracion;
+        }
+    }
+    &_text{
+        border: l.$border;
+        background-color: l.$blanco;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &_p{
+            background-color: l.$azul;
+            border: l.$border;
+            width: 50rem;
+        }
+    }
 }
 

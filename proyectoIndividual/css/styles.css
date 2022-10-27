@@ -8,11 +8,94 @@ font-family: 'Rubik', sans-serif; */
 }
 
 body {
+  margin: 0;
   background-color: #fae482;
+  color: white;
+  font-family: "Lato";
 }
 
 .header,
 .footer {
-  height: 10em;
+  height: 20rem;
   background-color: #1d1e73;
+}
+
+.header__nav {
+  height: 5rem;
+  background-color: rgba(90, 112, 251, 0.2941176471);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+.header__nav_logo {
+  height: 3rem;
+  width: 3rem;
+  background-color: #9c872A;
+}
+.header__nav_lista {
+  width: 30%;
+  height: 3rem;
+  border: 1px solid white;
+}
+.header__nav_lista_ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+.header__nav_lista_item_link {
+  text-decoration: none;
+  color: #9c872A;
+}
+
+.header__banner {
+  height: 15rem;
+  border-top: 2px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__banner_link {
+  text-decoration: none;
+  color: #9c872A;
+}
+.header__banner_link_title {
+  font-family: "Abril Fatface";
+  font-size: 7em;
+  border: 1px solid white;
+}
+
+.main__section1,
+.main__section2,
+.main__section3 {
+  height: 50rem;
+  border: 1px solid white;
+}
+
+.main__section1 {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.main__section1_title {
+  border: 1px solid white;
+  font-family: "Abril Fatface";
+  font-size: 2em;
+}
+.main__section1_title_link {
+  text-decoration: none;
+}
+.main__section1_text {
+  border: 1px solid white;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main__section1_text_p {
+  background-color: #191ce3;
+  border: 1px solid white;
+  width: 50rem;
 }
