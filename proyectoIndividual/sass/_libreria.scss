@@ -1,7 +1,15 @@
 // ARRAY DE FUENTES
-$fuentes:(
+$fuentes: (
     titulo: 'Abril Fatface',
-    texto:  'Lato'
+    texto: 'Lato'
+);
+$bordes: (
+    radius: 1rem,
+    borde: '1px solid white'
+);
+$fondoTrans: (
+    oscuro:rgba(15, 15, 15, 0.5),
+    claro:rgba(255, 255, 255, 0.5)
 );
 
 // VARIABLES DE COLORES
@@ -11,14 +19,11 @@ $azul: #191ce3;
 $verde: #9c872A;
 $blanco: white;
 $negro: #000;
-$amarilloclaro:#fae482;
+$amarilloclaro: #fae482;
 $morado: #5A70fB;
 
 // VARIABLES DECORACIÓN
 $decoracion: none;
-$border: 1px solid white;
-$borderRadius: 10px;
-
 /* font-family: 'Abril Fatface', cursive;
 
 font-family: 'Lato', sans-serif;

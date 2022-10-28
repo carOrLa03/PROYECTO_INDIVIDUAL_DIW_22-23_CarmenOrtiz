@@ -14,8 +14,7 @@ body {
   font-family: "Lato";
 }
 
-.header,
-.footer {
+.header {
   height: 20rem;
   background-color: #1d1e73;
 }
@@ -36,7 +35,7 @@ body {
 .header__nav_lista {
   width: 30%;
   height: 3rem;
-  border: 1px solid white;
+  border: "1px solid white";
 }
 .header__nav_lista_ul {
   display: flex;
@@ -63,14 +62,14 @@ body {
 .header__banner_link_title {
   font-family: "Abril Fatface";
   font-size: 7em;
-  border: 1px solid white;
+  border: "1px solid white";
 }
 
 .main__section1,
 .main__section2,
 .main__section3 {
   height: 50rem;
-  border: 1px solid white;
+  border: "1px solid white";
 }
 
 .main__section1 {
@@ -79,7 +78,7 @@ body {
   flex-direction: column;
 }
 .main__section1_title {
-  border: 1px solid white;
+  border: "1px solid white";
   font-family: "Abril Fatface";
   font-size: 2em;
 }
@@ -87,7 +86,7 @@ body {
   text-decoration: none;
 }
 .main__section1_text {
-  border: 1px solid white;
+  border: "1px solid white";
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -96,6 +95,94 @@ body {
 }
 .main__section1_text_p {
   background-color: #191ce3;
-  border: 1px solid white;
+  border: "1px solid white";
   width: 50rem;
+}
+
+.main__section2 {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  border: "1px solid white";
+}
+.main__section2_title_link {
+  font-family: "Abril Fatface";
+  font-size: 2em;
+  text-decoration: none;
+}
+.main__section2_col {
+  height: 40rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: "1px solid white";
+  margin: 1rem;
+}
+.main__section2_col_col1 {
+  margin: 1rem;
+  width: 25%;
+  height: 40rem;
+  background-color: green;
+  border: "1px solid white";
+  border-radius: 1rem;
+}
+.main__section2_col_col1_link {
+  color: #9c872A;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main__section2_col_col1_link_caja {
+  width: 20rem;
+  height: 12rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 1rem;
+}
+.main__section2_col_col2 {
+  margin: 1rem;
+  width: 25%;
+  height: 40rem;
+  background-color: red;
+  border: "1px solid white";
+  border-radius: 1rem;
+}
+.main__section2_col_col2_link {
+  text-decoration: none;
+  color: #9c872A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main__section2_col_col2_link_caja {
+  width: 20rem;
+  height: 12rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 1rem;
+}
+
+.footer {
+  height: 10rem;
+  background-color: #1d1e73;
+}
+.footer__container1 {
+  height: 5rem;
+  width: 20rem;
+  background-color: antiquewhite;
+}
+.footer__container1_lista {
+  display: flex;
+}
+.footer__container1_lista_item {
+  list-style: none;
+}
+.footer__container1_lista_item_link_img {
+  height: 3rem;
+  width: 3rem;
+  background-color: aquamarine;
+}
+.footer__container2 {
+  height: 5rem;
+  width: 20rem;
+  background-color: orangered;
 }

@@ -1,95 +1,214 @@
 @use 'libreria' as l;
-*{
+
+* {
     box-sizing: border-box;
 }
-body{
+
+body {
     margin: 0;
     background-color: l.$amarilloclaro;
     color: l.$blanco;
     font-family: map-get(l.$fuentes, texto);
 }
-.header,
-.footer{
+
+.header {
     height: 20rem;
     background-color: l.$azulnoche;
 }
-.header__nav{
+
+.header__nav {
     height: 5rem;
     background-color: #5a70fb4b;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 2rem;
-    &_logo{
+
+    &_logo {
         height: 3rem;
         width: 3rem;
         background-color: #9c872A;
     }
-    &_lista{ 
+
+    &_lista {
         width: 30%;
         height: 3rem;
-        border:l.$border;
-        &_ul{
+        border: map-get(l.$bordes, borde);
+
+        &_ul {
             display: flex;
             justify-content: space-around;
             align-items: center;
             list-style: l.$decoracion;
         }
-        &_item{
-            &_link{
+
+        &_item {
+            &_link {
                 text-decoration: l.$decoracion;
                 color: #9c872A;
             }
         }
-    }    
+    }
 }
-.header__banner{
+
+.header__banner {
     height: 15rem;
     border-top: 2px solid#000;
     display: flex;
     justify-content: center;
     align-items: center;
-    &_link{
+
+    &_link {
         text-decoration: l.$decoracion;
         color: #9c872A;
-        &_title{
+
+        &_title {
             font-family: map-get(l.$fuentes, titulo);
             font-size: 7em;
-            border: l.$border;
+            border: map-get(l.$bordes, borde);
         }
     }
 }
+
 .main__section1,
 .main__section2,
-.main__section3{
+.main__section3 {
     height: 50rem;
-    border: l.$border;
+    border: map-get(l.$bordes, borde);
 }
-.main__section1{
+
+.main__section1 {
     text-align: center;
     display: flex;
     flex-direction: column;
-    &_title{
-        border: l.$border;
+
+    &_title {
+        border: map-get(l.$bordes, borde);
         font-family: map-get(l.$fuentes, titulo);
         font-size: 2em;
-        &_link{
+
+        &_link {
             text-decoration: l.$decoracion;
         }
     }
-    &_text{
-        border: l.$border;
+
+    &_text {
+        border: map-get(l.$bordes, borde);
         background-color: l.$blanco;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
 
-        &_p{
+        &_p {
             background-color: l.$azul;
-            border: l.$border;
+            border: map-get(l.$bordes, borde);
             width: 50rem;
         }
     }
 }
 
+.main__section2 {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border: map-get(l.$bordes, borde);
+
+    &_title_link {
+        font-family: map-get(l.$fuentes, titulo);
+        font-size: 2em;
+        text-decoration: l.$decoracion;
+    }
+
+    &_col {
+        height: 40rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: map-get(l.$bordes, borde);
+        margin: 1rem;
+
+        &_col1 {
+            margin: 1rem;
+            width: 25%;
+            height: 40rem;
+            background-color: green;
+            border: map-get(l.$bordes, borde);
+            border-radius: map-get(l.$bordes, radius);
+
+            &_link {
+                color: l.$verde;
+                text-decoration: l.$decoracion;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &_caja {
+                    width: 20rem;
+                    height: 12rem;
+                    background-color: map-get(l.$fondoTrans, claro);
+                    border-radius: map-get(l.$bordes, radius);
+                }
+            }
+        }
+
+        &_col2 {
+            margin: 1rem;
+            width: 25%;
+            height: 40rem;
+            background-color: red;
+            border: map-get(l.$bordes, borde);
+            border-radius: map-get(l.$bordes, radius);
+
+            &_link {
+                text-decoration: l.$decoracion;
+                color: l.$verde;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &_caja {
+                    width: 20rem;
+                    height: 12rem;
+                    background-color: map-get(l.$fondoTrans, claro);
+                    border-radius: map-get(l.$bordes, radius);
+                }
+
+            }
+        }
+    }
+}
+
+.footer {
+    height: 10rem;
+    background-color: l.$azulnoche;
+
+    &__container1 {
+        height: 5rem;
+        width: 20rem;
+        background-color: antiquewhite;
+
+        &_lista {
+            display: flex;
+        }
+
+        &_lista_item {
+            list-style: l.$decoracion;
+
+            &_link_img {
+                height: 3rem;
+                width: 3rem;
+                background-color: aquamarine;
+
+            }
+
+        }
+
+    }
+
+    &__container2 {
+        height: 5rem;
+        width: 20rem;
+        background-color: orangered;
+    }
+}
