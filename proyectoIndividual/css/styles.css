@@ -164,6 +164,10 @@ body {
 .footer {
   height: 10rem;
   background-color: #1d1e73;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .footer__container1 {
   height: 5rem;
@@ -172,6 +176,7 @@ body {
 }
 .footer__container1_lista {
   display: flex;
+  justify-content: space-around;
 }
 .footer__container1_lista_item {
   list-style: none;
@@ -185,4 +190,7 @@ body {
   height: 5rem;
   width: 20rem;
   background-color: orangered;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
