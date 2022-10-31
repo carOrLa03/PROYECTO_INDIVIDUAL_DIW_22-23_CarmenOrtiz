@@ -5,218 +5,357 @@
 }
 
 body {
-    margin: 0;
-    background-color: l.$amarilloclaro;
-    color: l.$blanco;
+    margin: 0; 
+    color: l.$negro;
     font-family: map-get(l.$fuentes, texto);
 }
 
 .header {
-    height: 20rem;
-    background-color: l.$azulnoche;
+    background-image: url("../assets/img/nochemod2.jpg");
+    clip-path: ellipse(60% 80% at 50% 10%);
+    @include l.flexSeparado(column, nowrap);
+}
+.button_responsive{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    @include l.movil{
+        display: block;
+        
+    }
+    @include l.tablet{
+        display: none;
+    }
+    @include l.desktop{
+        display: none;
+    }
+
+}
+.boton_menu{
+    width: 3em;
+    height: 3em;
+
 }
 
 .header__nav {
-    height: 5rem;
-    background-color: #5a70fb4b;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem;
-
-    &_logo {
-        height: 3rem;
-        width: 3rem;
-        background-color: #9c872A;
-    }
-
+    width: 100%;
+    background-color: l.$azulnoche;
+    padding: 1rem;
+    @include l.flexSeparado(row, wrap);
+          
     &_lista {
-        width: 30%;
-        height: 3rem;
-        border: map-get(l.$bordes, borde);
-
-        &_ul {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            list-style: l.$decoracion;
+        @include l.movil{
+            display: none;  
+            &--ver{
+            display: block;
         }
 
+        }
+        @include l.tablet{
+            display: block;
+        }
+        @include l.desktop{
+            display: block;
+        }
+      
+
+        &_ul {
+            list-style: l.$decoracion;
+            @include l.tablet{
+                @include l.flexCenter(row, nowrap);
+            }
+            @include l.desktop{
+                @include l.flexCenter(row, nowrap);
+            }
+        }
         &_item {
+            @include l.movil{
+                margin: 2em 1em;
+            }
+            @include l.tablet{
+                margin: 2em 1em;
+            }
+            @include l.desktop{
+                margin:0 2em;
+            }
             &_link {
                 text-decoration: l.$decoracion;
-                color: #9c872A;
+                color: l.$verde;
+                font-size: 1.5em;
             }
         }
     }
 }
 
 .header__banner {
-    height: 15rem;
-    border-top: 2px solid#000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+    width: 100%;
+    @include l.flexCenter(row, nowrap);
     &_link {
         text-decoration: l.$decoracion;
-        color: #9c872A;
+        color: l.$verde;
 
         &_title {
             font-family: map-get(l.$fuentes, titulo);
             font-size: 7em;
-            border: map-get(l.$bordes, borde);
+
+            @include l.movil{
+                font-size: 3em;
+            }
+            @include l.tablet{
+                font-size: 5em;
+            }
         }
     }
-}
-
-.main__section1,
-.main__section2,
-.main__section3 {
-    height: 50rem;
-    border: map-get(l.$bordes, borde);
 }
 
 .main__section1 {
     text-align: center;
-    display: flex;
-    flex-direction: column;
+    width: 100%;
+    @include l.flexCenter(column, nowrap);
 
     &_title {
-        border: map-get(l.$bordes, borde);
         font-family: map-get(l.$fuentes, titulo);
         font-size: 2em;
-
+        @include l.movil{
+            font-size: 1em;
+        }
+        @include l.tablet{
+            font-size: 2em;
+        }
         &_link {
             text-decoration: l.$decoracion;
+            color: l.$azulnoche;
         }
     }
 
-    &_text {
-        border: map-get(l.$bordes, borde);
-        background-color: l.$blanco;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    &_text {  
+        color: #9c872A;
+        text-align: left; 
+        @include l.movil{
+            font-size: 0.8rem;
+            width: 12rem;     
+        }
+        @include l.tablet{
+            font-size: 1em;
+            width: 25rem;
+        }
+        @include l.desktop{
+            font-size: 1em;
+            width: 100%;
+            @include l.flexCenter(row, nowrap);
+        }
+        &_p{
+            @include l.flexCenter(row, nowrap);
+            margin: 1em;
+            padding: 1em;
+            background: linear-gradient(#010c55da,#665e3b2c, #010c55da);
+            background-color: #010c55da;
+            border-radius: map-get(l.$bordes, radius);
+            box-shadow: 10px 10px 20px #050e4765, -10px -10px 20px #050e4796;
+            @include l.desktop{
+                height: 35rem;
+            }
+            @include l.large{
+                height: 23rem;
 
-        &_p {
-            background-color: l.$azul;
-            border: map-get(l.$bordes, borde);
-            width: 50rem;
+            }
+
         }
     }
 }
 
 .main__section2 {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    border: map-get(l.$bordes, borde);
-
-    &_title_link {
+    @include l.flexCenter(column, nowrap);
+    background-color: #0b0e20d7;
+    padding: 3em;
+    &_title {
         font-family: map-get(l.$fuentes, titulo);
         font-size: 2em;
         text-decoration: l.$decoracion;
+        @include l.movil{
+            font-size: 1em;
+        }
+        @include l.tablet{
+            font-size: 2em;
+        }
+        &_link {
+            text-decoration: l.$decoracion;
+            color: l.$verde;
+        }
     }
 
     &_col {
-        height: 40rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: map-get(l.$bordes, borde);
-        margin: 1rem;
-
+        @include l.flexCenter(column, nowrap);
+        @include l.movil{
+            font-size: 1.5em;
+            font-style: italic;
+        }
+        @include l.tablet{
+            @include l.flexCenter(row, nowrap);
+        }
         &_col1 {
             margin: 1rem;
-            width: 25%;
-            height: 40rem;
-            background-color: green;
-            border: map-get(l.$bordes, borde);
-            border-radius: map-get(l.$bordes, radius);
 
             &_link {
-                color: l.$verde;
+                width: 30rem;
+                height: 40rem;
                 text-decoration: l.$decoracion;
+                text-align: center;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                &_img{
+                    max-width: 100%;
+                    object-fit: cover;
+                    border-radius: map-get(l.$bordes, radius);
+                    box-shadow: -20px -20px 40px l.$azulnoche;
+                    
+                }
 
                 &_caja {
-                    width: 20rem;
-                    height: 12rem;
+                    position: absolute;
                     background-color: map-get(l.$fondoTrans, claro);
-                    border-radius: map-get(l.$bordes, radius);
+                    border-radius: map-get(l.$bordes, elipse);
+                }
+                &_caja:hover{
+                    border: 2px solid white;
+                    background-color: map-get(l.$fondoTrans, oscuro);
+                }
+                &_title{
+                    width: 20rem;
+                    padding: 1rem;
+                    color: l.$morado;
+                }
+                &_title:hover{
+                    color: l.$verde;
                 }
             }
+            
         }
 
         &_col2 {
             margin: 1rem;
-            width: 25%;
-            height: 40rem;
-            background-color: red;
-            border: map-get(l.$bordes, borde);
-            border-radius: map-get(l.$bordes, radius);
-
+            
             &_link {
+                width: 30rem;
+                height: 40rem;
                 text-decoration: l.$decoracion;
-                color: l.$verde;
+                text-align: center;
                 display: flex;
                 justify-content: center;
                 align-items: center;
 
-                &_caja {
-                    width: 20rem;
-                    height: 12rem;
-                    background-color: map-get(l.$fondoTrans, claro);
+                &_img{
+                    max-width: 100%;
+                    object-fit: cover;
                     border-radius: map-get(l.$bordes, radius);
+                    box-shadow: -20px -20px 40px l.$azulnoche;
+                }
+
+                &_caja {
+                    position: absolute;
+                    background-color: map-get(l.$fondoTrans, claro);
+                    border-radius: map-get(l.$bordes, elipse);
+                }
+                &_caja:hover{
+                    border: 2px solid white;
+                    background-color: map-get(l.$fondoTrans, oscuro);
+                }
+                &_title{
+                    width: 20rem;
+                    padding: 1rem;
+                    color: l.$morado;
+                }
+                &_title:hover{
+                    color: l.$verde;
                 }
 
             }
         }
     }
 }
-
-.footer {
-    height: 10rem;
-    background-color: l.$azulnoche;
+.main__section3{
+    text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    &_title {
+        font-family: map-get(l.$fuentes, titulo);
+        font-size: 2em;
+        text-decoration: l.$decoracion;
+        @include l.movil{
+            font-size: 1em;
+        }
+        @include l.tablet{
+            font-size: 2em;
+        }
+        &_link {
+            text-decoration: l.$decoracion;
+            color: l.$azulnoche;
+        }
+    }
+    
+}
+.carrusel{
+    width: 100%;
+    max-width: 100em;
+    @include l.flexCenter(column, nowrap);
+    &_grande{
+        width: 300%;
+        background-color:#9c872a73;
+        border-radius: map-get(l.$bordes, radius);
+        @include l.flexCenter(row, nowrap);
+        transition: all .5s ease;
+        transform: translateX(0);
+        &_img{
+            height: 40rem;
+            width: calc(100% / 3);
+            margin: 2em;
+            border-radius: map-get(l.$bordes, radius);
+        }
+    }
+
+}
+.puntos{
+    width: 100%;
+    padding: 1em;
+    @include l.flexCenter(row, nowrap);
+    list-style: none;
+    &_li{
+        width: 1em;
+        height: 1em;
+        @include l.neo(10px, 50px);
+        margin: 1em;
+
+    }
+}
+.activo{
+    background-color: #9c872abd;
+}
+
+.footer {
+    background-color: l.$morado;
+    @include l.flexCenter(column, nowrap);
 
     &__container1 {
-        height: 5rem;
-        width: 20rem;
-        background-color: antiquewhite;
-
         &_lista {
-            display: flex;
-            justify-content: space-around;
+            @include l.flexCenter(row, nowrap);
         }
-
         &_lista_item {
             list-style: l.$decoracion;
-
+            margin:0 1em;
             &_link_img {
                 height: 3rem;
                 width: 3rem;
-                background-color: aquamarine;
-
             }
-
         }
-
     }
 
     &__container2 {
-        height: 5rem;
-        width: 20rem;
-        background-color: orangered;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        padding: 1em;
+        &_milink{
+            color: #9c872A;
+            text-decoration: l.$decoracion;
+        }
     }
 }
+

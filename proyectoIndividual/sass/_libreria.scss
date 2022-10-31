@@ -1,31 +1,68 @@
 // ARRAY DE FUENTES
 $fuentes: (
     titulo: 'Abril Fatface',
-    texto: 'Lato'
+    texto: 'Lato',
+    sustitutoTitulo: 'Rubik'
 );
 $bordes: (
     radius: 1rem,
-    borde: '1px solid white'
+    borde: '1px solid white',
+    elipse: 15rem
 );
 $fondoTrans: (
     oscuro:rgba(15, 15, 15, 0.5),
-    claro:rgba(255, 255, 255, 0.5)
+    claro:rgba(255, 255, 255, 0.274)
 );
 
 // VARIABLES DE COLORES
-$amarillo: #fadd6c;
-$azulnoche: #1d1e73;
-$azul: #191ce3;
+$azulnoche: #050e47a6;
 $verde: #9c872A;
 $blanco: white;
 $negro: #000;
-$amarilloclaro: #fae482;
-$morado: #5A70fB;
+$morado: #0b0e20;
 
 // VARIABLES DECORACIÓN
 $decoracion: none;
-/* font-family: 'Abril Fatface', cursive;
 
-font-family: 'Lato', sans-serif;
+// MIXINS
+@mixin flexCenter($direction, $wrap){
+    display: flex;
+    flex-flow: $direction $wrap;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flexSeparado($direccion, $wrap){
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin neo($radius, $eje){
+    border-radius: $radius;
+    background-color: rgb(9, 4, 78);
+    box-shadow: $eje $eje ($eje*2) rgb(34, 32, 32),
+                (-$eje) (-$eje) ($eje*2) rgb(117, 115, 115);
+}
 
-font-family: 'Rubik', sans-serif; */
+@mixin movil{
+    @media only screen and (min-width: 300px){
+        @content;
+    }
+}
+
+@mixin tablet{
+    @media only screen and (min-width: 650px){
+        @content;
+    }
+}
+@mixin desktop{
+    @media only screen and (min-width: 1024px){
+        @content;
+    }
+}
+@mixin large{
+    @media only screen and (min-width: 1440px){
+        @content;
+    }
+}
+

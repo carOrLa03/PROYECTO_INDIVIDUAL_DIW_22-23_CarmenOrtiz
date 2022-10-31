@@ -1,33 +1,35 @@
-/*
-  3d Carousel with set-width carousel.
- It's just 3 different views of the carousel.
- The side items have rotation with transition-origin on their respective edge
- And everything is wrapped by a perspective wrapper
-  For set-width images with auto-width carousel check:
-  **link**
-*/
-// width - padding = min
-// padding = max
-const padding = 200;
-const slidesCount = 3 - 1;
-function map(x, in_min, in_max, out_min, out_max) {
-    return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
-}
-document.addEventListener('mousemove', (e) => {
-    // Change to bodywidth
-    const wrapper = document.getElementById('wrapper')
-    const rect = wrapper.getBoundingClientRect();
-    // Mouse position in between padding
-    const mouseX = Math.min(Math.max(e.clientX - padding, 0), rect.width - padding * 2);
-    const rawPercent = map(mouseX, 0, rect.width - padding * 2, 100 - 100 * slidesCount, 100);
-    const percent = Math.round(rawPercent)
-    const left = document.getElementById('left');
-    const center = document.getElementById('center');
-    const right = document.getElementById('right');
-    left.style.transform = `translateX(${percent}%)`;
-    center.style.transform = `translateX(${percent - 100}%)`;
-    right.style.transform = `translateX(${percent - 200}%)`;
-    //debug
-    const paragraph = document.getElementById('t');
-    paragraph.innerHTML = percent;
-})
+// JS PARA EL CARROUSEL
+
+const grande = document.querySelector(".carrusel_grande");
+const punto = document.querySelectorAll(".puntos_li");
+
+//  asignar click a los puntos
+//  saber su posicion
+// aplicar un transform translateX al grande
+// quitar la clase activo a todos los puntos
+// añadir la clase activo al punto que hemos hecho click
+
+punto.forEach((cadaPunto, i) => {
+  punto[i].addEventListener("click", () => {
+    // si posicion es 0 transformX es 0
+    // si posicion es 1 transformX es -33%
+
+    let posicion = i;
+    let operacion = posicion * -33;
+    grande.style.transform = `translateX(${operacion}%)`;
+    punto.forEach((cadaPunto, i) => {
+      punto[i].classList.remove("activo");
+    });
+    punto[i].classList.add("activo");
+  });
+});
+
+// cuando haga click le añado y quito la clase
+const btnMenu = document.querySelector(".button_responsive");
+const navegador = document.querySelector(".header__nav_lista");
+
+btnMenu.addEventListener("click", (e) => {
+  e.preventDefault();
+  console.log("hola");
+  navegador.classList.toggle("header__nav_lista--ver");
+});

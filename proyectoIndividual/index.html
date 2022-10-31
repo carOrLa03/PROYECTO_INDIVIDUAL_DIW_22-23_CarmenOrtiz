@@ -11,8 +11,6 @@
       href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lato:wght@300;400;700&family=Rubik:wght@300;400;800&display=swap"
       rel="stylesheet"
     />
-    <!-- <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css"/>
-    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script> -->
     <link rel="stylesheet" href="css/styles.css" />
     <script defer src="JS/script.js"></script>
   </head>
@@ -21,17 +19,21 @@
     <header class="header">
       <div class="header__nav">
         <div class="header__nav_logo">
-          <a href="#" class="header__nav_logo-link">
-            <img src="" alt="" class="header__nav_logo-link_img" />
+          <a href="#" class="header__nav_logo_link">
+            <img
+              src="assets/logo2NY(2).png"
+              alt="logo"
+              class="header__nav_logo_link_img"
+            />
           </a>
         </div>
-        <button class="header__button">
+        <button class="button_responsive">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
             height="16"
-            fill="currentColor"
-            class="header__button_svg"
+            fill="#9c872A"
+            class="boton_menu"
             viewBox="0 0 16 16"
           >
             <path
@@ -126,29 +128,25 @@
         <div class="main__section2_col">
           <div class="main__section2_col_col1">
             <a href="#" class="main__section2_col_col1_link">
-              <img src="" alt="" class="main__section2_col_col1_link_img" />
-              <div class="main__section2_col_col2_link_caja">
-                <h3 class="main__section2_col_col1_link_title">TITULO H3</h3>
-                <p class="main__section2_col_col1_link_text">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Voluptates aspernatur, quae nobis laboriosam cumque, molestias
-                  nesciunt quibusdam doloribus nam modi eum ducimus nulla odio
-                  dolorem ipsa necessitatibus? Voluptates, officiis sequi?
-                </p>
+              <img
+                src="./assets/imgCarrusel/emp3.jpg"
+                alt=""
+                class="main__section2_col_col1_link_img"
+              />
+              <div class="main__section2_col_col1_link_caja">
+                <h3 class="main__section2_col_col1_link_title">TITULO 1</h3>
               </div>
             </a>
           </div>
           <div class="main__section2_col_col2">
             <a href="#" class="main__section2_col_col2_link">
-              <img src="" alt="" class="main__section2_col_col2_link_img" />
+              <img
+                src="./assets/imgCarrusel/azul.jpg"
+                alt=""
+                class="main__section2_col_col2_link_img"
+              />
               <div class="main__section2_col_col2_link_caja">
-                <h3 class="main__section2_col_col2_link_title">TITULO H3</h3>
-                <p class="main__section2_col_col2_link_text">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                  repellendus culpa, beatae nisi eaque illum quaerat eum odit
-                  sed, est porro perferendis ratione aliquam maxime vel
-                  blanditiis excepturi, deserunt voluptates.
-                </p>
+                <h3 class="main__section2_col_col2_link_title">TITULO 2</h3>
               </div>
             </a>
           </div>
@@ -158,38 +156,30 @@
         <h2 class="main__section3_title">
           <a href="" class="main__section3_title_link">Gallery</a>
         </h2>
-        <div class="wrapper" id="wrapper">
-          <div class="wrapper-3d">
-            <div class="carousel-wrapper center-3d">
-              <div class="carousel-container" id="center">
-                <div class="slide first"></div>
-                <div class="slide second"></div>
-                <div class="slide third"></div>
-              </div>
-              <div class="first image" id="img"></div>
-            </div>
-            <div class="carousel-wrapper left-3d center-3d">
-              <div class="carousel-container" id="left">
-                <div class="slide first"></div>
-                <div class="slide second"></div>
-                <div class="slide third"></div>
-              </div>
-            </div>
-            <div class="carousel-wrapper right-3d center-3d">
-              <div class="carousel-container" id="right">
-                <div class="slide first"></div>
-                <div class="slide second"></div>
-                <div class="slide third"></div>
-              </div>
-            </div>
+        <div class="main__section3 carrusel">
+          <div class="carrusel_grande">
+            <img
+              src="./assets/imgCarrusel/pexels-reynaldo-brigworkz-brigantty-771885.jpg"
+              alt="imagen1"
+              class="carrusel_grande_img"
+            />
+            <img
+              src="./assets/imgCarrusel/pexels-vicente-vidal-2697050.jpg"
+              alt="imagen2"
+              class="carrusel_grande_img"
+            />
+            <img
+              src="./assets/imgCarrusel/pexels-yuting-gao-1737957.jpg"
+              alt="imagen3"
+              class="carrusel_grande_img"
+            />
           </div>
         </div>
-
-        <p class="debug debug-top" id="t">0</p>
-        <p class="debug debug-bot">
-          <br />
-          Move your mouse horizontally
-        </p>
+        <ul class="carrusel_puntos puntos">
+          <li class="puntos_li activo"></li>
+          <li class="puntos_li"></li>
+          <li class="puntos_li"></li>
+        </ul>
       </section>
     </main>
     <footer class="footer">
@@ -198,32 +188,32 @@
           <li class="footer__container1_lista_item">
             <a href="#" class="footer__container1_lista_item_link"
               ><img
-                src=""
-                alt=""
+                src="./assets/whatsappBlanco.png"
+                alt="whatsapp"
                 class="footer__container1_lista_item_link_img"
             /></a>
           </li>
           <li class="footer__container1_lista_item">
             <a href="#" class="footer__container1_lista_item_link"
               ><img
-                src=""
-                alt=""
+                src="./assets/githubblanco.png"
+                alt="github"
                 class="footer__container1_lista_item_link_img"
             /></a>
           </li>
           <li class="footer__container1_lista_item">
             <a href="#" class="footer__container1_lista_item_link"
               ><img
-                src=""
-                alt=""
+                src="./assets/instablanco.png"
+                alt="instagram"
                 class="footer__container1_lista_item_link_img"
             /></a>
           </li>
           <li class="footer__container1_lista_item">
             <a href="#" class="footer__container1_lista_item_link"
               ><img
-                src=""
-                alt=""
+                src="./assets/youtubeblanco.png"
+                alt="youtube"
                 class="footer__container1_lista_item_link_img"
             /></a>
           </li>
