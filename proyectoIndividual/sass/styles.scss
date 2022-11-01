@@ -12,8 +12,17 @@ body {
 
 .header {
     background-image: url("../assets/img/nochemod2.jpg");
-    clip-path: ellipse(60% 80% at 50% 10%);
+    // clip-path: ellipse(60% 80% at 50% 10%);
     @include l.flexSeparado(column, nowrap);
+    @include l.movil{
+        clip-path: ellipse(110% 80% at 50% 10%);
+    }
+    @include l.tablet{
+        clip-path: ellipse(80% 80% at 50% 10%);
+    }
+    @include l.desktop{
+        clip-path: ellipse(60% 80% at 50% 10%);
+    }
 }
 .button_responsive{
     background-color: transparent;
@@ -61,12 +70,7 @@ body {
 
         &_ul {
             list-style: l.$decoracion;
-            @include l.tablet{
-                @include l.flexCenter(row, nowrap);
-            }
-            @include l.desktop{
-                @include l.flexCenter(row, nowrap);
-            }
+            @include l.flexCenter(row, nowrap);
         }
         &_item {
             @include l.movil{
@@ -81,7 +85,12 @@ body {
             &_link {
                 text-decoration: l.$decoracion;
                 color: l.$verde;
-                font-size: 1.5em;
+                @include l.movil{
+                    font-size: 0.8em;
+                }
+                @include l.tablet{
+                    font-size: 1.5em;
+                }
             }
         }
     }
@@ -99,7 +108,7 @@ body {
             font-size: 7em;
 
             @include l.movil{
-                font-size: 3em;
+                font-size: 5em;
             }
             @include l.tablet{
                 font-size: 5em;
@@ -115,12 +124,11 @@ body {
 
     &_title {
         font-family: map-get(l.$fuentes, titulo);
-        font-size: 2em;
         @include l.movil{
-            font-size: 1em;
+            font-size: 2em;
         }
         @include l.tablet{
-            font-size: 2em;
+            font-size: 3em;
         }
         &_link {
             text-decoration: l.$decoracion;
@@ -129,20 +137,19 @@ body {
     }
 
     &_text {  
-        color: #9c872A;
+        color: l.$verde;
         text-align: left; 
+        font-size: 1rem;
         @include l.movil{
-            font-size: 0.8rem;
-            width: 12rem;     
+            width: 20rem;     
         }
         @include l.tablet{
-            font-size: 1em;
-            width: 25rem;
+            width: 40rem;
         }
         @include l.desktop{
-            font-size: 1em;
             width: 100%;
-            @include l.flexCenter(row, nowrap);
+            display: grid;
+            grid-template-columns: 50% 1fr;
         }
         &_p{
             @include l.flexCenter(row, nowrap);
@@ -152,13 +159,6 @@ body {
             background-color: #010c55da;
             border-radius: map-get(l.$bordes, radius);
             box-shadow: 10px 10px 20px #050e4765, -10px -10px 20px #050e4796;
-            @include l.desktop{
-                height: 35rem;
-            }
-            @include l.large{
-                height: 23rem;
-
-            }
 
         }
     }
@@ -167,16 +167,15 @@ body {
 .main__section2 {
     @include l.flexCenter(column, nowrap);
     background-color: #0b0e20d7;
-    padding: 3em;
     &_title {
         font-family: map-get(l.$fuentes, titulo);
-        font-size: 2em;
         text-decoration: l.$decoracion;
+        margin-bottom: 3em;
         @include l.movil{
-            font-size: 1em;
+            font-size: 2em;
         }
         @include l.tablet{
-            font-size: 2em;
+            font-size: 3em;
         }
         &_link {
             text-decoration: l.$decoracion;
@@ -184,28 +183,48 @@ body {
         }
     }
 
-    &_col {
-        @include l.flexCenter(column, nowrap);
+    &_col {  
+        padding-bottom: 1em;
         @include l.movil{
+            @include l.flexCenter(column, nowrap);
             font-size: 1.5em;
             font-style: italic;
+            row-gap: 1em
         }
         @include l.tablet{
             @include l.flexCenter(row, nowrap);
+            column-gap: 1em;
         }
         &_col1 {
-            margin: 1rem;
-
-            &_link {
+            @include l.movil{
+                width: 20rem;
+                height: 30rem;
+            }
+            @include l.tablet{
+                width: 20rem;
+                height: 40rem;
+            }
+            @include l.desktop{
                 width: 30rem;
                 height: 40rem;
+            }
+            &_link {
                 text-decoration: l.$decoracion;
                 text-align: center;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                @include l.flexCenter(row, nowrap);
                 &_img{
-                    max-width: 100%;
+                    @include l.movil{
+                        width: 20rem;
+                        height: 30rem;
+                    }
+                    @include l.tablet{
+                        width: 20rem;
+                        height: 40rem;
+                    }
+                    @include l.desktop{
+                        width: 30rem;
+                        height: 40rem;
+                    }
                     object-fit: cover;
                     border-radius: map-get(l.$bordes, radius);
                     box-shadow: -20px -20px 40px l.$azulnoche;
@@ -216,37 +235,55 @@ body {
                     position: absolute;
                     background-color: map-get(l.$fondoTrans, claro);
                     border-radius: map-get(l.$bordes, elipse);
-                }
-                &_caja:hover{
-                    border: 2px solid white;
-                    background-color: map-get(l.$fondoTrans, oscuro);
+                    &:hover{
+                        border: 2px solid white;
+                        background-color: map-get(l.$fondoTrans, oscuro);
+                    }
                 }
                 &_title{
-                    width: 20rem;
+                    width: 15rem;
                     padding: 1rem;
                     color: l.$morado;
-                }
-                &_title:hover{
-                    color: l.$verde;
+                    &:hover{
+                        color: l.$verde;
+                    }
                 }
             }
             
         }
 
         &_col2 {
-            margin: 1rem;
-            
-            &_link {
+            @include l.movil{
+                width: 20rem;
+                height: 30rem;
+            }
+            @include l.tablet{
+                width: 20rem;
+                height: 40rem;
+            }
+            @include l.desktop{
                 width: 30rem;
                 height: 40rem;
+            }
+            &_link {
                 text-decoration: l.$decoracion;
                 text-align: center;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                @include l.flexCenter(row, nowrap);
 
                 &_img{
-                    max-width: 100%;
+                    @include l.movil{
+                        width: 20rem;
+                        height: 30rem;
+                    }
+                    @include l.tablet{
+                        width: 20rem;
+                        height: 40rem;
+                    }
+                    @include l.desktop{
+                        width: 30rem;
+                        height: 40rem;
+                    }
+
                     object-fit: cover;
                     border-radius: map-get(l.$bordes, radius);
                     box-shadow: -20px -20px 40px l.$azulnoche;
@@ -256,18 +293,18 @@ body {
                     position: absolute;
                     background-color: map-get(l.$fondoTrans, claro);
                     border-radius: map-get(l.$bordes, elipse);
-                }
-                &_caja:hover{
-                    border: 2px solid white;
-                    background-color: map-get(l.$fondoTrans, oscuro);
+                    &:hover{
+                        border: 2px solid white;
+                        background-color: map-get(l.$fondoTrans, oscuro);
+                    }
                 }
                 &_title{
-                    width: 20rem;
+                    width: 15rem;
                     padding: 1rem;
                     color: l.$morado;
-                }
-                &_title:hover{
-                    color: l.$verde;
+                    &:hover{
+                        color: l.$verde;
+                    }
                 }
 
             }
@@ -280,37 +317,60 @@ body {
     flex-direction: column;
     &_title {
         font-family: map-get(l.$fuentes, titulo);
-        font-size: 2em;
+        font-size: 3em;
         text-decoration: l.$decoracion;
         @include l.movil{
-            font-size: 1em;
+            font-size: 2em;
         }
         @include l.tablet{
-            font-size: 2em;
+            font-size: 3em;
         }
         &_link {
             text-decoration: l.$decoracion;
-            color: l.$azulnoche;
+            color: l.$verde;
         }
     }
     
 }
 .carrusel{
     width: 100%;
-    max-width: 100em;
-    @include l.flexCenter(column, nowrap);
-    &_grande{
-        width: 300%;
-        background-color:#9c872a73;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    &__show{
+        width: 50rem;
+        height: 40rem;
+        overflow: hidden;
         border-radius: map-get(l.$bordes, radius);
-        @include l.flexCenter(row, nowrap);
+        @include l.movil{
+            width: 20rem;
+            height: 15rem;
+        }
+        @include l.tablet{
+            width: 50rem;
+            height: 40rem;
+        }
+
+    }
+    &__grande{
+        width: 300%;
         transition: all .5s ease;
         transform: translateX(0);
-        &_img{
+        @include l.flexCenter(row, nowrap);
+
+    }
+    &__img{
+        width: 50rem;
+        height: 40rem;
+        object-fit: cover;
+        border-radius: map-get(l.$bordes, radius);
+        @include l.movil{
+            width: 20rem;
+            height: 15rem;
+        }
+        @include l.tablet{
+            width: 50rem;
             height: 40rem;
-            width: calc(100% / 3);
-            margin: 2em;
-            border-radius: map-get(l.$bordes, radius);
         }
     }
 
@@ -329,7 +389,7 @@ body {
     }
 }
 .activo{
-    background-color: #9c872abd;
+    background-color:l.$verde;
 }
 
 .footer {
@@ -356,6 +416,24 @@ body {
             color: #9c872A;
             text-decoration: l.$decoracion;
         }
+    }
+}
+.ir_arriba {
+    width:3rem;
+    height:3rem;
+	display:block;
+    color: l.$verde;
+	cursor:pointer;
+	position: fixed;
+	bottom:10em;
+	right:2em;
+    @include l.movil{
+        width:2rem;
+        height:2rem;
+    }
+    @include l.desktop{
+        width:3rem;
+        height:3rem;
     }
 }
 

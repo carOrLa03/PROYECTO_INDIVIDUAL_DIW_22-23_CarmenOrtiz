@@ -10,11 +10,25 @@ body {
 
 .header {
   background-image: url("../assets/img/nochemod2.jpg");
-  clip-path: ellipse(60% 80% at 50% 10%);
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
+}
+@media only screen and (min-width: 300px) {
+  .header {
+    clip-path: ellipse(110% 80% at 50% 10%);
+  }
+}
+@media only screen and (min-width: 650px) {
+  .header {
+    clip-path: ellipse(80% 80% at 50% 10%);
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .header {
+    clip-path: ellipse(60% 80% at 50% 10%);
+  }
 }
 
 .button_responsive {
@@ -72,22 +86,10 @@ body {
 }
 .header__nav_lista_ul {
   list-style: none;
-}
-@media only screen and (min-width: 650px) {
-  .header__nav_lista_ul {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .header__nav_lista_ul {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-  }
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
 }
 @media only screen and (min-width: 300px) {
   .header__nav_lista_item {
@@ -107,7 +109,16 @@ body {
 .header__nav_lista_item_link {
   text-decoration: none;
   color: #9c872A;
-  font-size: 1.5em;
+}
+@media only screen and (min-width: 300px) {
+  .header__nav_lista_item_link {
+    font-size: 0.8em;
+  }
+}
+@media only screen and (min-width: 650px) {
+  .header__nav_lista_item_link {
+    font-size: 1.5em;
+  }
 }
 
 .header__banner {
@@ -127,7 +138,7 @@ body {
 }
 @media only screen and (min-width: 300px) {
   .header__banner_link_title {
-    font-size: 3em;
+    font-size: 5em;
   }
 }
 @media only screen and (min-width: 650px) {
@@ -146,16 +157,15 @@ body {
 }
 .main__section1_title {
   font-family: "Abril Fatface";
-  font-size: 2em;
 }
 @media only screen and (min-width: 300px) {
   .main__section1_title {
-    font-size: 1em;
+    font-size: 2em;
   }
 }
 @media only screen and (min-width: 650px) {
   .main__section1_title {
-    font-size: 2em;
+    font-size: 3em;
   }
 }
 .main__section1_title_link {
@@ -165,27 +175,23 @@ body {
 .main__section1_text {
   color: #9c872A;
   text-align: left;
+  font-size: 1rem;
 }
 @media only screen and (min-width: 300px) {
   .main__section1_text {
-    font-size: 0.8rem;
-    width: 12rem;
+    width: 20rem;
   }
 }
 @media only screen and (min-width: 650px) {
   .main__section1_text {
-    font-size: 1em;
-    width: 25rem;
+    width: 40rem;
   }
 }
 @media only screen and (min-width: 1024px) {
   .main__section1_text {
-    font-size: 1em;
     width: 100%;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 50% 1fr;
   }
 }
 .main__section1_text_p {
@@ -200,16 +206,6 @@ body {
   border-radius: 1rem;
   box-shadow: 10px 10px 20px rgba(5, 14, 71, 0.3960784314), -10px -10px 20px rgba(5, 14, 71, 0.5882352941);
 }
-@media only screen and (min-width: 1024px) {
-  .main__section1_text_p {
-    height: 35rem;
-  }
-}
-@media only screen and (min-width: 1440px) {
-  .main__section1_text_p {
-    height: 23rem;
-  }
-}
 
 .main__section2 {
   display: flex;
@@ -217,21 +213,20 @@ body {
   justify-content: center;
   align-items: center;
   background-color: rgba(11, 14, 32, 0.8431372549);
-  padding: 3em;
 }
 .main__section2_title {
   font-family: "Abril Fatface";
-  font-size: 2em;
   text-decoration: none;
+  margin-bottom: 3em;
 }
 @media only screen and (min-width: 300px) {
   .main__section2_title {
-    font-size: 1em;
+    font-size: 2em;
   }
 }
 @media only screen and (min-width: 650px) {
   .main__section2_title {
-    font-size: 2em;
+    font-size: 3em;
   }
 }
 .main__section2_title_link {
@@ -239,15 +234,17 @@ body {
   color: #9c872A;
 }
 .main__section2_col {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
+  padding-bottom: 1em;
 }
 @media only screen and (min-width: 300px) {
   .main__section2_col {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
     font-size: 1.5em;
     font-style: italic;
+    row-gap: 1em;
   }
 }
 @media only screen and (min-width: 650px) {
@@ -256,25 +253,57 @@ body {
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
+    column-gap: 1em;
   }
 }
-.main__section2_col_col1 {
-  margin: 1rem;
+@media only screen and (min-width: 300px) {
+  .main__section2_col_col1 {
+    width: 20rem;
+    height: 30rem;
+  }
+}
+@media only screen and (min-width: 650px) {
+  .main__section2_col_col1 {
+    width: 20rem;
+    height: 40rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .main__section2_col_col1 {
+    width: 30rem;
+    height: 40rem;
+  }
 }
 .main__section2_col_col1_link {
-  width: 30rem;
-  height: 40rem;
   text-decoration: none;
   text-align: center;
   display: flex;
+  flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
 }
 .main__section2_col_col1_link_img {
-  max-width: 100%;
   object-fit: cover;
   border-radius: 1rem;
   box-shadow: -20px -20px 40px rgba(5, 14, 71, 0.6509803922);
+}
+@media only screen and (min-width: 300px) {
+  .main__section2_col_col1_link_img {
+    width: 20rem;
+    height: 30rem;
+  }
+}
+@media only screen and (min-width: 650px) {
+  .main__section2_col_col1_link_img {
+    width: 20rem;
+    height: 40rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .main__section2_col_col1_link_img {
+    width: 30rem;
+    height: 40rem;
+  }
 }
 .main__section2_col_col1_link_caja {
   position: absolute;
@@ -286,30 +315,61 @@ body {
   background-color: rgba(15, 15, 15, 0.5);
 }
 .main__section2_col_col1_link_title {
-  width: 20rem;
+  width: 15rem;
   padding: 1rem;
   color: #0b0e20;
 }
 .main__section2_col_col1_link_title:hover {
   color: #9c872A;
 }
-.main__section2_col_col2 {
-  margin: 1rem;
+@media only screen and (min-width: 300px) {
+  .main__section2_col_col2 {
+    width: 20rem;
+    height: 30rem;
+  }
+}
+@media only screen and (min-width: 650px) {
+  .main__section2_col_col2 {
+    width: 20rem;
+    height: 40rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .main__section2_col_col2 {
+    width: 30rem;
+    height: 40rem;
+  }
 }
 .main__section2_col_col2_link {
-  width: 30rem;
-  height: 40rem;
   text-decoration: none;
   text-align: center;
   display: flex;
+  flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
 }
 .main__section2_col_col2_link_img {
-  max-width: 100%;
   object-fit: cover;
   border-radius: 1rem;
   box-shadow: -20px -20px 40px rgba(5, 14, 71, 0.6509803922);
+}
+@media only screen and (min-width: 300px) {
+  .main__section2_col_col2_link_img {
+    width: 20rem;
+    height: 30rem;
+  }
+}
+@media only screen and (min-width: 650px) {
+  .main__section2_col_col2_link_img {
+    width: 20rem;
+    height: 40rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .main__section2_col_col2_link_img {
+    width: 30rem;
+    height: 40rem;
+  }
 }
 .main__section2_col_col2_link_caja {
   position: absolute;
@@ -321,7 +381,7 @@ body {
   background-color: rgba(15, 15, 15, 0.5);
 }
 .main__section2_col_col2_link_title {
-  width: 20rem;
+  width: 15rem;
   padding: 1rem;
   color: #0b0e20;
 }
@@ -336,48 +396,74 @@ body {
 }
 .main__section3_title {
   font-family: "Abril Fatface";
-  font-size: 2em;
+  font-size: 3em;
   text-decoration: none;
 }
 @media only screen and (min-width: 300px) {
   .main__section3_title {
-    font-size: 1em;
+    font-size: 2em;
   }
 }
 @media only screen and (min-width: 650px) {
   .main__section3_title {
-    font-size: 2em;
+    font-size: 3em;
   }
 }
 .main__section3_title_link {
   text-decoration: none;
-  color: rgba(5, 14, 71, 0.6509803922);
+  color: #9c872A;
 }
 
 .carrusel {
   width: 100%;
-  max-width: 100em;
   display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
-.carrusel_grande {
-  width: 300%;
-  background-color: rgba(156, 135, 42, 0.4509803922);
+.carrusel__show {
+  width: 50rem;
+  height: 40rem;
+  overflow: hidden;
   border-radius: 1rem;
+}
+@media only screen and (min-width: 300px) {
+  .carrusel__show {
+    width: 20rem;
+    height: 15rem;
+  }
+}
+@media only screen and (min-width: 650px) {
+  .carrusel__show {
+    width: 50rem;
+    height: 40rem;
+  }
+}
+.carrusel__grande {
+  width: 300%;
+  transition: all 0.5s ease;
+  transform: translateX(0);
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-  transition: all 0.5s ease;
-  transform: translateX(0);
 }
-.carrusel_grande_img {
+.carrusel__img {
+  width: 50rem;
   height: 40rem;
-  width: 33.3333333333%;
-  margin: 2em;
+  object-fit: cover;
   border-radius: 1rem;
+}
+@media only screen and (min-width: 300px) {
+  .carrusel__img {
+    width: 20rem;
+    height: 15rem;
+  }
+}
+@media only screen and (min-width: 650px) {
+  .carrusel__img {
+    width: 50rem;
+    height: 40rem;
+  }
 }
 
 .puntos {
@@ -399,7 +485,7 @@ body {
 }
 
 .activo {
-  background-color: rgba(156, 135, 42, 0.7411764706);
+  background-color: #9c872A;
 }
 
 .footer {
@@ -429,4 +515,27 @@ body {
 .footer__container2_milink {
   color: #9c872A;
   text-decoration: none;
+}
+
+.ir_arriba {
+  width: 3rem;
+  height: 3rem;
+  display: block;
+  color: #9c872A;
+  cursor: pointer;
+  position: fixed;
+  bottom: 10em;
+  right: 2em;
+}
+@media only screen and (min-width: 300px) {
+  .ir_arriba {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .ir_arriba {
+    width: 3rem;
+    height: 3rem;
+  }
 }

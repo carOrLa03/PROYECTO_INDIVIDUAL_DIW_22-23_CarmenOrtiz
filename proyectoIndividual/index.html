@@ -45,30 +45,54 @@
         <nav class="header__nav_lista">
           <ul class="header__nav_lista_ul">
             <li class="header__nav_lista_item">
-              <a href="#" class="header__nav_lista_item_link">HOME</a>
+              <a href="#" name="menu" class="header__nav_lista_item_link"
+                >HOME</a
+              >
             </li>
             <li class="header__nav_lista_item">
-              <a href="#" class="header__nav_lista_item_link">HISTORY</a>
+              <a href="#historia" class="header__nav_lista_item_link"
+                >HISTORY</a
+              >
             </li>
             <li class="header__nav_lista_item">
-              <a href="#" class="header__nav_lista_item_link">NOW</a>
+              <a href="#now" class="header__nav_lista_item_link">NOW</a>
             </li>
             <li class="header__nav_lista_item">
-              <a href="#" class="header__nav_lista_item_link">GALLERY</a>
+              <a href="#gallery" class="header__nav_lista_item_link">GALLERY</a>
             </li>
           </ul>
         </nav>
       </div>
       <div class="header__banner">
-        <a href="#" class="header__banner_link">
+        <a
+          href="https://es.wikipedia.org/wiki/Nueva_York"
+          class="header__banner_link"
+        >
           <h1 class="header__banner_link_title">New York</h1>
         </a>
       </div>
     </header>
     <main class="main">
+      <div class="ir_arriba" id="ir_arriba">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          class="flecha_arriba"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm8.5 9.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"
+          />
+        </svg>
+      </div>
       <section class="main__section1">
         <h2 class="main__section1_title">
-          <a href="#" class="main__section1_title_link"
+          <a
+            href="#menu"
+            name="historia"
+            class="main__section1_title_link"
+            id="historia"
             >Historia de Nueva York</a
           >
         </h2>
@@ -123,7 +147,9 @@
       </section>
       <section class="main__section2">
         <h2 class="main__section2_title">
-          <a href="#" class="main__section2_title_link">Now</a>
+          <a href="#menu" name="now" class="main__section2_title_link" id="now"
+            >Now</a
+          >
         </h2>
         <div class="main__section2_col">
           <div class="main__section2_col_col1">
@@ -154,25 +180,33 @@
       </section>
       <section class="main__section3">
         <h2 class="main__section3_title">
-          <a href="" class="main__section3_title_link">Gallery</a>
+          <a
+            name="gallery"
+            href="#"
+            class="main__section3_title_link"
+            id="gallery"
+            >Gallery</a
+          >
         </h2>
         <div class="main__section3 carrusel">
-          <div class="carrusel_grande">
-            <img
-              src="./assets/imgCarrusel/pexels-reynaldo-brigworkz-brigantty-771885.jpg"
-              alt="imagen1"
-              class="carrusel_grande_img"
-            />
-            <img
-              src="./assets/imgCarrusel/pexels-vicente-vidal-2697050.jpg"
-              alt="imagen2"
-              class="carrusel_grande_img"
-            />
-            <img
-              src="./assets/imgCarrusel/pexels-yuting-gao-1737957.jpg"
-              alt="imagen3"
-              class="carrusel_grande_img"
-            />
+          <div class="carrusel__show">
+            <div class="carrusel__grande">
+              <img
+                src="./assets/imgCarrusel/pexels-reynaldo-brigworkz-brigantty-771885.jpg"
+                alt="imagen1"
+                class="carrusel__img"
+              />
+              <img
+                src="./assets/imgCarrusel/pexels-vicente-vidal-2697050.jpg"
+                alt="imagen2"
+                class="carrusel__img"
+              />
+              <img
+                src="./assets/imgCarrusel/pexels-yuting-gao-1737957.jpg"
+                alt="imagen3"
+                class="carrusel__img"
+              />
+            </div>
           </div>
         </div>
         <ul class="carrusel_puntos puntos">
@@ -194,7 +228,9 @@
             /></a>
           </li>
           <li class="footer__container1_lista_item">
-            <a href="#" class="footer__container1_lista_item_link"
+            <a
+              href="https://github.com/carOrLa03"
+              class="footer__container1_lista_item_link"
               ><img
                 src="./assets/githubblanco.png"
                 alt="github"
@@ -220,7 +256,7 @@
         </ul>
       </div>
       <div class="footer__container2">
-        <a href="#" class="footer__container2_milink"
+        <a href="https://github.com/carOrLa03" class="footer__container2_milink"
           >&copy; 2022 by Carmen Ortiz</a
         >
       </div>
