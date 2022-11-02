@@ -1,265 +1,187 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Proyecto Individual</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lato:wght@300;400;700&family=Rubik:wght@300;400;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/styles.css" />
-    <script defer src="JS/script.js"></script>
-  </head>
 
-  <body>
-    <header class="header">
-      <div class="header__nav">
-        <div class="header__nav_logo">
-          <a href="#" class="header__nav_logo_link">
-            <img
-              src="assets/logo2NY(2).png"
-              alt="logo"
-              class="header__nav_logo_link_img"
-            />
-          </a>
-        </div>
-        <button class="button_responsive">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="#9c872A"
-            class="boton_menu"
-            viewBox="0 0 16 16"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
-            />
-          </svg>
-        </button>
-        <nav class="header__nav_lista">
-          <ul class="header__nav_lista_ul">
-            <li class="header__nav_lista_item">
-              <a href="#" name="menu" class="header__nav_lista_item_link"
-                >HOME</a
-              >
-            </li>
-            <li class="header__nav_lista_item">
-              <a href="#historia" class="header__nav_lista_item_link"
-                >HISTORY</a
-              >
-            </li>
-            <li class="header__nav_lista_item">
-              <a href="#now" class="header__nav_lista_item_link">NOW</a>
-            </li>
-            <li class="header__nav_lista_item">
-              <a href="#gallery" class="header__nav_lista_item_link">GALLERY</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div class="header__banner">
-        <a
-          href="https://es.wikipedia.org/wiki/Nueva_York"
-          class="header__banner_link"
-        >
-          <h1 class="header__banner_link_title">New York</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proyecto Individual</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lato:wght@300;400;700&family=Rubik:wght@300;400;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script defer src="JS/script.js"></script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__nav">
+      <div class="header__nav_logo">
+        <a href="#" class="header__nav_logo_link">
+          <img src="assets/logo3NYmod2.png" alt="logo" class="header__nav_logo_link_img" />
         </a>
       </div>
-    </header>
-    <main class="main">
-      <div class="ir_arriba" id="ir_arriba">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="currentColor"
-          class="flecha_arriba"
-          viewBox="0 0 16 16"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm8.5 9.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"
-          />
+      <button class="button_responsive">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#9c872A" class="boton_menu"
+          viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
         </svg>
+      </button>
+      <nav class="header__nav_lista">
+        <ul class="header__nav_lista_ul">
+          <li class="header__nav_lista_item">
+            <a href="#" name="menu" class="header__nav_lista_item_link">HOME</a>
+          </li>
+          <li class="header__nav_lista_item">
+            <a href="#historia" class="header__nav_lista_item_link">HISTORY</a>
+          </li>
+          <li class="header__nav_lista_item">
+            <a href="#now" class="header__nav_lista_item_link">NOW</a>
+          </li>
+          <li class="header__nav_lista_item">
+            <a href="#gallery" class="header__nav_lista_item_link">GALLERY</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__banner">
+      <a href="https://es.wikipedia.org/wiki/Nueva_York" class="header__banner_link">
+        <h1 class="header__banner_link_title">New York</h1>
+      </a>
+    </div>
+  </header>
+  <main class="main">
+    <div class="ir_arriba" id="ir_arriba">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="flecha_arriba" viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+          d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm8.5 9.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z" />
+      </svg>
+    </div>
+    <section class="main__section1">
+      <h2 class="main__section1_title">
+        <a href="#menu" name="historia" class="main__section1_title_link" id="historia">Historia de Nueva York</a>
+      </h2>
+      <div class="main__section1_text">
+        <p class="main__section1_text_p">
+          El primer explorador en atisbar la isla de Manhattan en 1524 fue el
+          navegante Giovanni da Verrazzano al servicio de la corona francesa.
+          La zona, a la que denominó Nueva Angulema, estaba habitada por los
+          indios algonquinos e iroqueses.
+        </p>
+        <p class="main__section1_text_p">
+          El segundo en explorar la bahía fue el británico Hudson en 1609, al
+          servicio de los Países Bajos, que dio su nombre al río. En 1674, por
+          el tratado de Westminster, la isla de Manhattan pasó de los
+          holandeses a los ingleses, que la rebautizaron con el nombre de
+          Nueva York en honor al Duque de York. Con las colonias vecinas los
+          ingleses constituyeron Nueva Inglaterra. Nueva York desempeñó un
+          importante papel en la Guerra de la Independencia de los Estados
+          Unidos, siendo escenario de varias batallas. En 1775, los
+          revolucionarios se opusieron a los leales a Inglaterra y aprobaron
+          la independencia al año siguiente.
+        </p>
+        <p class="main__section1_text_p">
+          La inmigración y el desarrollo transformaron la ciudad, de tal forma
+          que en 1835 Nueva York se convirtió en la ciudad más grande de
+          Estados Unidos. Hasta 1898 la ciudad estaba formada únicamente por
+          Manhattan a la que se unieron los distritos de Brooklyn, Queens,
+          Bronx y Staten Island. A ello contribuyó la construcción de muchos
+          de sus famosos puentes y el metro en 1904.
+        </p>
+        <p class="main__section1_text_p">
+          Durante el siglo XX Nueva York no ha dejado de crecer. La Estatua de
+          la Libertad ha sido testigo de la llegada de millones de inmigrantes
+          (en 1948 ya superaba a Londres como la ciudad más poblada del
+          mundo). Nueva York se convirtió en el centro de la inmigración
+          europea, asiática y de América latina.
+        </p>
+        <p class="main__section1_text_p">
+          Tras la Segunda Guerra Mundial, Nueva York se convirtió en la ciudad
+          más importante del mundo con un gran peso económico (Wall Street),
+          político (sede de la ONU) y cultural (sustituye a París como meca
+          del arte y de la cultura). Asimismo se ha convertido en un gran
+          destino turístico internacional.
+        </p>
+        <p class="main__section1_text_p">
+          Nueva York se ha convertido en los últimos años y por méritos
+          propios en la capital económica y cultural más importante del mundo.
+          La ciudad ofrece un ambiente y un estilo de vida único difíciles de
+          explicar en una guía de Nueva York, hay que vivirlo y disfrutarlo.
+        </p>
       </div>
-      <section class="main__section1">
-        <h2 class="main__section1_title">
-          <a
-            href="#menu"
-            name="historia"
-            class="main__section1_title_link"
-            id="historia"
-            >Historia de Nueva York</a
-          >
-        </h2>
-        <div class="main__section1_text">
-          <p class="main__section1_text_p">
-            El primer explorador en atisbar la isla de Manhattan en 1524 fue el
-            navegante Giovanni da Verrazzano al servicio de la corona francesa.
-            La zona, a la que denominó Nueva Angulema, estaba habitada por los
-            indios algonquinos e iroqueses.
-          </p>
-          <p class="main__section1_text_p">
-            El segundo en explorar la bahía fue el británico Hudson en 1609, al
-            servicio de los Países Bajos, que dio su nombre al río. En 1674, por
-            el tratado de Westminster, la isla de Manhattan pasó de los
-            holandeses a los ingleses, que la rebautizaron con el nombre de
-            Nueva York en honor al Duque de York. Con las colonias vecinas los
-            ingleses constituyeron Nueva Inglaterra. Nueva York desempeñó un
-            importante papel en la Guerra de la Independencia de los Estados
-            Unidos, siendo escenario de varias batallas. En 1775, los
-            revolucionarios se opusieron a los leales a Inglaterra y aprobaron
-            la independencia al año siguiente.
-          </p>
-          <p class="main__section1_text_p">
-            La inmigración y el desarrollo transformaron la ciudad, de tal forma
-            que en 1835 Nueva York se convirtió en la ciudad más grande de
-            Estados Unidos. Hasta 1898 la ciudad estaba formada únicamente por
-            Manhattan a la que se unieron los distritos de Brooklyn, Queens,
-            Bronx y Staten Island. A ello contribuyó la construcción de muchos
-            de sus famosos puentes y el metro en 1904.
-          </p>
-          <p class="main__section1_text_p">
-            Durante el siglo XX Nueva York no ha dejado de crecer. La Estatua de
-            la Libertad ha sido testigo de la llegada de millones de inmigrantes
-            (en 1948 ya superaba a Londres como la ciudad más poblada del
-            mundo). Nueva York se convirtió en el centro de la inmigración
-            europea, asiática y de América latina.
-          </p>
-          <p class="main__section1_text_p">
-            Tras la Segunda Guerra Mundial, Nueva York se convirtió en la ciudad
-            más importante del mundo con un gran peso económico (Wall Street),
-            político (sede de la ONU) y cultural (sustituye a París como meca
-            del arte y de la cultura). Asimismo se ha convertido en un gran
-            destino turístico internacional.
-          </p>
-          <p class="main__section1_text_p">
-            Nueva York se ha convertido en los últimos años y por méritos
-            propios en la capital económica y cultural más importante del mundo.
-            La ciudad ofrece un ambiente y un estilo de vida único difíciles de
-            explicar en una guía de Nueva York, hay que vivirlo y disfrutarlo.
-          </p>
-        </div>
-      </section>
-      <section class="main__section2">
-        <h2 class="main__section2_title">
-          <a href="#menu" name="now" class="main__section2_title_link" id="now"
-            >Now</a
-          >
-        </h2>
-        <div class="main__section2_col">
-          <div class="main__section2_col_col1">
-            <a href="#" class="main__section2_col_col1_link">
-              <img
-                src="./assets/imgCarrusel/emp3.jpg"
-                alt=""
-                class="main__section2_col_col1_link_img"
-              />
-              <div class="main__section2_col_col1_link_caja">
-                <h3 class="main__section2_col_col1_link_title">TITULO 1</h3>
-              </div>
-            </a>
-          </div>
-          <div class="main__section2_col_col2">
-            <a href="#" class="main__section2_col_col2_link">
-              <img
-                src="./assets/imgCarrusel/azul.jpg"
-                alt=""
-                class="main__section2_col_col2_link_img"
-              />
-              <div class="main__section2_col_col2_link_caja">
-                <h3 class="main__section2_col_col2_link_title">TITULO 2</h3>
-              </div>
-            </a>
-          </div>
-        </div>
-      </section>
-      <section class="main__section3">
-        <h2 class="main__section3_title">
-          <a
-            name="gallery"
-            href="#"
-            class="main__section3_title_link"
-            id="gallery"
-            >Gallery</a
-          >
-        </h2>
-        <div class="main__section3 carrusel">
-          <div class="carrusel__show">
-            <div class="carrusel__grande">
-              <img
-                src="./assets/imgCarrusel/pexels-reynaldo-brigworkz-brigantty-771885.jpg"
-                alt="imagen1"
-                class="carrusel__img"
-              />
-              <img
-                src="./assets/imgCarrusel/pexels-vicente-vidal-2697050.jpg"
-                alt="imagen2"
-                class="carrusel__img"
-              />
-              <img
-                src="./assets/imgCarrusel/pexels-yuting-gao-1737957.jpg"
-                alt="imagen3"
-                class="carrusel__img"
-              />
+    </section>
+    <section class="main__section2">
+      <h2 class="main__section2_title">
+        <a href="#menu" name="now" class="main__section2_title_link" id="now">Now</a>
+      </h2>
+      <div class="main__section2_col">
+        <div class="main__section2_col_col1">
+          <a href="#" class="main__section2_col_col1_link">
+            <img src="./assets/imgCarrusel/emp3.jpg" alt="" class="main__section2_col_col1_link_img" />
+            <div class="main__section2_col_col1_link_caja">
+              <h3 class="main__section2_col_col1_link_title">TITULO 1</h3>
             </div>
+          </a>
+        </div>
+        <div class="main__section2_col_col2">
+          <a href="#" class="main__section2_col_col2_link">
+            <img src="./assets/imgCarrusel/azul.jpg" alt="" class="main__section2_col_col2_link_img" />
+            <div class="main__section2_col_col2_link_caja">
+              <h3 class="main__section2_col_col2_link_title">TITULO 2</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="main__section3">
+      <h2 class="main__section3_title">
+        <a name="gallery" href="#" class="main__section3_title_link" id="gallery">Gallery</a>
+      </h2>
+      <div class="main__section3 carrusel">
+        <div class="carrusel__show">
+          <div class="carrusel__grande">
+            <img src="./assets/imgCarrusel/pexels-reynaldo-brigworkz-brigantty-771885.jpg" alt="imagen1"
+              class="carrusel__img" />
+            <img src="./assets/imgCarrusel/pexels-vicente-vidal-2697050.jpg" alt="imagen2" class="carrusel__img" />
+            <img src="./assets/imgCarrusel/pexels-yuting-gao-1737957.jpg" alt="imagen3" class="carrusel__img" />
           </div>
         </div>
-        <ul class="carrusel_puntos puntos">
-          <li class="puntos_li activo"></li>
-          <li class="puntos_li"></li>
-          <li class="puntos_li"></li>
-        </ul>
-      </section>
-    </main>
-    <footer class="footer">
-      <div class="footer__container1">
-        <ul class="footer__container1_lista">
-          <li class="footer__container1_lista_item">
-            <a href="#" class="footer__container1_lista_item_link"
-              ><img
-                src="./assets/whatsappBlanco.png"
-                alt="whatsapp"
-                class="footer__container1_lista_item_link_img"
-            /></a>
-          </li>
-          <li class="footer__container1_lista_item">
-            <a
-              href="https://github.com/carOrLa03"
-              class="footer__container1_lista_item_link"
-              ><img
-                src="./assets/githubblanco.png"
-                alt="github"
-                class="footer__container1_lista_item_link_img"
-            /></a>
-          </li>
-          <li class="footer__container1_lista_item">
-            <a href="#" class="footer__container1_lista_item_link"
-              ><img
-                src="./assets/instablanco.png"
-                alt="instagram"
-                class="footer__container1_lista_item_link_img"
-            /></a>
-          </li>
-          <li class="footer__container1_lista_item">
-            <a href="#" class="footer__container1_lista_item_link"
-              ><img
-                src="./assets/youtubeblanco.png"
-                alt="youtube"
-                class="footer__container1_lista_item_link_img"
-            /></a>
-          </li>
-        </ul>
       </div>
-      <div class="footer__container2">
-        <a href="https://github.com/carOrLa03" class="footer__container2_milink"
-          >&copy; 2022 by Carmen Ortiz</a
-        >
-      </div>
-    </footer>
-  </body>
+      <ul class="carrusel_puntos puntos">
+        <li class="puntos_li activo"></li>
+        <li class="puntos_li"></li>
+        <li class="puntos_li"></li>
+      </ul>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__container1">
+      <ul class="footer__container1_lista">
+        <li class="footer__container1_lista_item">
+          <a href="#" class="footer__container1_lista_item_link"><img src="./assets/whatsappBlanco.png" alt="whatsapp"
+              class="footer__container1_lista_item_link_img" /></a>
+        </li>
+        <li class="footer__container1_lista_item">
+          <a href="https://github.com/carOrLa03" class="footer__container1_lista_item_link"><img
+              src="./assets/githubblanco.png" alt="github" class="footer__container1_lista_item_link_img" /></a>
+        </li>
+        <li class="footer__container1_lista_item">
+          <a href="#" class="footer__container1_lista_item_link"><img src="./assets/instablanco.png" alt="instagram"
+              class="footer__container1_lista_item_link_img" /></a>
+        </li>
+        <li class="footer__container1_lista_item">
+          <a href="#" class="footer__container1_lista_item_link"><img src="./assets/youtubeblanco.png" alt="youtube"
+              class="footer__container1_lista_item_link_img" /></a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer__container2">
+      <a href="https://github.com/carOrLa03" class="footer__container2_milink">&copy; 2022 by Carmen Ortiz</a>
+    </div>
+  </footer>
+</body>
+
 </html>

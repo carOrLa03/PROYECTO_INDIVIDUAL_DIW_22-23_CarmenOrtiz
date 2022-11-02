@@ -67,6 +67,24 @@ body {
   align-items: center;
 }
 @media only screen and (min-width: 300px) {
+  .header__nav_logo_link_img {
+    width: 8rem;
+    height: 5rem;
+  }
+}
+@media only screen and (min-width: 650px) {
+  .header__nav_logo_link_img {
+    width: 8rem;
+    height: 5rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .header__nav_logo_link_img {
+    width: 10rem;
+    height: 8rem;
+  }
+}
+@media only screen and (min-width: 300px) {
   .header__nav_lista {
     display: none;
   }
@@ -109,6 +127,7 @@ body {
 .header__nav_lista_item_link {
   text-decoration: none;
   color: #9c872A;
+  text-shadow: 1px 1px 2px #e2d28c;
 }
 @media only screen and (min-width: 300px) {
   .header__nav_lista_item_link {
@@ -135,6 +154,7 @@ body {
 .header__banner_link_title {
   font-family: "Abril Fatface";
   font-size: 7em;
+  text-shadow: 15px 15px 30px #051644, -15px -15px 30px #020b24;
 }
 @media only screen and (min-width: 300px) {
   .header__banner_link_title {

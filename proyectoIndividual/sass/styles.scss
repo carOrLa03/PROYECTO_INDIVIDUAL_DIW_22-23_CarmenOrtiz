@@ -5,7 +5,7 @@
 }
 
 body {
-    margin: 0; 
+    margin: 0;
     color: l.$negro;
     font-family: map-get(l.$fuentes, texto);
 }
@@ -14,33 +14,41 @@ body {
     background-image: url("../assets/img/nochemod2.jpg");
     // clip-path: ellipse(60% 80% at 50% 10%);
     @include l.flexSeparado(column, nowrap);
-    @include l.movil{
+
+    @include l.movil {
         clip-path: ellipse(110% 80% at 50% 10%);
     }
-    @include l.tablet{
+
+    @include l.tablet {
         clip-path: ellipse(80% 80% at 50% 10%);
     }
-    @include l.desktop{
+
+    @include l.desktop {
         clip-path: ellipse(60% 80% at 50% 10%);
     }
 }
-.button_responsive{
+
+.button_responsive {
     background-color: transparent;
     border: none;
     cursor: pointer;
-    @include l.movil{
+
+    @include l.movil {
         display: block;
-        
+
     }
-    @include l.tablet{
+
+    @include l.tablet {
         display: none;
     }
-    @include l.desktop{
+
+    @include l.desktop {
         display: none;
     }
 
 }
-.boton_menu{
+
+.boton_menu {
     width: 3em;
     height: 3em;
 
@@ -51,44 +59,72 @@ body {
     background-color: l.$azulnoche;
     padding: 1rem;
     @include l.flexSeparado(row, wrap);
-          
+
+    &_logo_link_img {
+        @include l.movil {
+            width: 8rem;
+            height: 5rem;
+        }
+
+        @include l.tablet {
+            width: 8rem;
+            height: 5rem;
+        }
+
+        @include l.desktop {
+            width: 10rem;
+            height: 8rem;
+        }
+
+    }
+
     &_lista {
-        @include l.movil{
-            display: none;  
-            &--ver{
+        @include l.movil {
+            display: none;
+
+            &--ver {
+                display: block;
+            }
+
+        }
+
+        @include l.tablet {
             display: block;
         }
 
-        }
-        @include l.tablet{
+        @include l.desktop {
             display: block;
         }
-        @include l.desktop{
-            display: block;
-        }
-      
+
 
         &_ul {
             list-style: l.$decoracion;
             @include l.flexCenter(row, nowrap);
         }
+
         &_item {
-            @include l.movil{
+            @include l.movil {
                 margin: 2em 1em;
             }
-            @include l.tablet{
+
+            @include l.tablet {
                 margin: 2em 1em;
             }
-            @include l.desktop{
-                margin:0 2em;
+
+            @include l.desktop {
+                margin: 0 2em;
             }
+
             &_link {
                 text-decoration: l.$decoracion;
                 color: l.$verde;
-                @include l.movil{
+                text-shadow: 1px 1px 2px#e2d28c;
+
+                @include l.movil {
                     font-size: 0.8em;
                 }
-                @include l.tablet{
+
+                @include l.tablet {
                     font-size: 1.5em;
                 }
             }
@@ -99,6 +135,7 @@ body {
 .header__banner {
     width: 100%;
     @include l.flexCenter(row, nowrap);
+
     &_link {
         text-decoration: l.$decoracion;
         color: l.$verde;
@@ -106,11 +143,13 @@ body {
         &_title {
             font-family: map-get(l.$fuentes, titulo);
             font-size: 7em;
+            text-shadow: 15px 15px 30px#051644, -15px -15px 30px#020b24;
 
-            @include l.movil{
+            @include l.movil {
                 font-size: 5em;
             }
-            @include l.tablet{
+
+            @include l.tablet {
                 font-size: 5em;
             }
         }
@@ -124,38 +163,45 @@ body {
 
     &_title {
         font-family: map-get(l.$fuentes, titulo);
-        @include l.movil{
+
+        @include l.movil {
             font-size: 2em;
         }
-        @include l.tablet{
+
+        @include l.tablet {
             font-size: 3em;
         }
+
         &_link {
             text-decoration: l.$decoracion;
             color: l.$azulnoche;
         }
     }
 
-    &_text {  
+    &_text {
         color: l.$verde;
-        text-align: left; 
+        text-align: left;
         font-size: 1rem;
-        @include l.movil{
-            width: 20rem;     
+
+        @include l.movil {
+            width: 20rem;
         }
-        @include l.tablet{
+
+        @include l.tablet {
             width: 40rem;
         }
-        @include l.desktop{
+
+        @include l.desktop {
             width: 100%;
             display: grid;
             grid-template-columns: 50% 1fr;
         }
-        &_p{
+
+        &_p {
             @include l.flexCenter(row, nowrap);
             margin: 1em;
             padding: 1em;
-            background: linear-gradient(#010c55da,#665e3b2c, #010c55da);
+            background: linear-gradient(#010c55da, #665e3b2c, #010c55da);
             background-color: #010c55da;
             border-radius: map-get(l.$bordes, radius);
             box-shadow: 10px 10px 20px #050e4765, -10px -10px 20px #050e4796;
@@ -167,119 +213,141 @@ body {
 .main__section2 {
     @include l.flexCenter(column, nowrap);
     background-color: #0b0e20d7;
+
     &_title {
         font-family: map-get(l.$fuentes, titulo);
         text-decoration: l.$decoracion;
         margin-bottom: 3em;
-        @include l.movil{
+
+        @include l.movil {
             font-size: 2em;
         }
-        @include l.tablet{
+
+        @include l.tablet {
             font-size: 3em;
         }
+
         &_link {
             text-decoration: l.$decoracion;
             color: l.$verde;
         }
     }
 
-    &_col {  
+    &_col {
         padding-bottom: 1em;
-        @include l.movil{
+
+        @include l.movil {
             @include l.flexCenter(column, nowrap);
             font-size: 1.5em;
             font-style: italic;
             row-gap: 1em
         }
-        @include l.tablet{
+
+        @include l.tablet {
             @include l.flexCenter(row, nowrap);
             column-gap: 1em;
         }
+
         &_col1 {
-            @include l.movil{
+            @include l.movil {
                 width: 20rem;
                 height: 30rem;
             }
-            @include l.tablet{
+
+            @include l.tablet {
                 width: 20rem;
                 height: 40rem;
             }
-            @include l.desktop{
+
+            @include l.desktop {
                 width: 30rem;
                 height: 40rem;
             }
+
             &_link {
                 text-decoration: l.$decoracion;
                 text-align: center;
                 @include l.flexCenter(row, nowrap);
-                &_img{
-                    @include l.movil{
+
+                &_img {
+                    @include l.movil {
                         width: 20rem;
                         height: 30rem;
                     }
-                    @include l.tablet{
+
+                    @include l.tablet {
                         width: 20rem;
                         height: 40rem;
                     }
-                    @include l.desktop{
+
+                    @include l.desktop {
                         width: 30rem;
                         height: 40rem;
                     }
+
                     object-fit: cover;
                     border-radius: map-get(l.$bordes, radius);
                     box-shadow: -20px -20px 40px l.$azulnoche;
-                    
+
                 }
 
                 &_caja {
                     position: absolute;
                     background-color: map-get(l.$fondoTrans, claro);
                     border-radius: map-get(l.$bordes, elipse);
-                    &:hover{
+
+                    &:hover {
                         border: 2px solid white;
                         background-color: map-get(l.$fondoTrans, oscuro);
                     }
                 }
-                &_title{
+
+                &_title {
                     width: 15rem;
                     padding: 1rem;
                     color: l.$morado;
-                    &:hover{
+
+                    &:hover {
                         color: l.$verde;
                     }
                 }
             }
-            
+
         }
 
         &_col2 {
-            @include l.movil{
+            @include l.movil {
                 width: 20rem;
                 height: 30rem;
             }
-            @include l.tablet{
+
+            @include l.tablet {
                 width: 20rem;
                 height: 40rem;
             }
-            @include l.desktop{
+
+            @include l.desktop {
                 width: 30rem;
                 height: 40rem;
             }
+
             &_link {
                 text-decoration: l.$decoracion;
                 text-align: center;
                 @include l.flexCenter(row, nowrap);
 
-                &_img{
-                    @include l.movil{
+                &_img {
+                    @include l.movil {
                         width: 20rem;
                         height: 30rem;
                     }
-                    @include l.tablet{
+
+                    @include l.tablet {
                         width: 20rem;
                         height: 40rem;
                     }
-                    @include l.desktop{
+
+                    @include l.desktop {
                         width: 30rem;
                         height: 40rem;
                     }
@@ -293,16 +361,19 @@ body {
                     position: absolute;
                     background-color: map-get(l.$fondoTrans, claro);
                     border-radius: map-get(l.$bordes, elipse);
-                    &:hover{
+
+                    &:hover {
                         border: 2px solid white;
                         background-color: map-get(l.$fondoTrans, oscuro);
                     }
                 }
-                &_title{
+
+                &_title {
                     width: 15rem;
                     padding: 1rem;
                     color: l.$morado;
-                    &:hover{
+
+                    &:hover {
                         color: l.$verde;
                     }
                 }
@@ -311,76 +382,91 @@ body {
         }
     }
 }
-.main__section3{
+
+.main__section3 {
     text-align: center;
     display: flex;
     flex-direction: column;
+
     &_title {
         font-family: map-get(l.$fuentes, titulo);
         font-size: 3em;
         text-decoration: l.$decoracion;
-        @include l.movil{
+
+        @include l.movil {
             font-size: 2em;
         }
-        @include l.tablet{
+
+        @include l.tablet {
             font-size: 3em;
         }
+
         &_link {
             text-decoration: l.$decoracion;
             color: l.$verde;
         }
     }
-    
+
 }
-.carrusel{
+
+.carrusel {
     width: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    &__show{
+
+    &__show {
         width: 50rem;
         height: 40rem;
         overflow: hidden;
         border-radius: map-get(l.$bordes, radius);
-        @include l.movil{
+
+        @include l.movil {
             width: 20rem;
             height: 15rem;
         }
-        @include l.tablet{
+
+        @include l.tablet {
             width: 50rem;
             height: 40rem;
         }
 
     }
-    &__grande{
+
+    &__grande {
         width: 300%;
         transition: all .5s ease;
         transform: translateX(0);
         @include l.flexCenter(row, nowrap);
 
     }
-    &__img{
+
+    &__img {
         width: 50rem;
         height: 40rem;
         object-fit: cover;
         border-radius: map-get(l.$bordes, radius);
-        @include l.movil{
+
+        @include l.movil {
             width: 20rem;
             height: 15rem;
         }
-        @include l.tablet{
+
+        @include l.tablet {
             width: 50rem;
             height: 40rem;
         }
     }
 
 }
-.puntos{
+
+.puntos {
     width: 100%;
     padding: 1em;
     @include l.flexCenter(row, nowrap);
     list-style: none;
-    &_li{
+
+    &_li {
         width: 1em;
         height: 1em;
         @include l.neo(10px, 50px);
@@ -388,8 +474,9 @@ body {
 
     }
 }
-.activo{
-    background-color:l.$verde;
+
+.activo {
+    background-color: l.$verde;
 }
 
 .footer {
@@ -400,9 +487,11 @@ body {
         &_lista {
             @include l.flexCenter(row, nowrap);
         }
+
         &_lista_item {
             list-style: l.$decoracion;
-            margin:0 1em;
+            margin: 0 1em;
+
             &_link_img {
                 height: 3rem;
                 width: 3rem;
@@ -412,28 +501,31 @@ body {
 
     &__container2 {
         padding: 1em;
-        &_milink{
+
+        &_milink {
             color: #9c872A;
             text-decoration: l.$decoracion;
         }
     }
 }
+
 .ir_arriba {
-    width:3rem;
-    height:3rem;
-	display:block;
+    width: 3rem;
+    height: 3rem;
+    display: block;
     color: l.$verde;
-	cursor:pointer;
-	position: fixed;
-	bottom:10em;
-	right:2em;
-    @include l.movil{
-        width:2rem;
-        height:2rem;
+    cursor: pointer;
+    position: fixed;
+    bottom: 10em;
+    right: 2em;
+
+    @include l.movil {
+        width: 2rem;
+        height: 2rem;
     }
-    @include l.desktop{
-        width:3rem;
-        height:3rem;
+
+    @include l.desktop {
+        width: 3rem;
+        height: 3rem;
     }
 }
-
