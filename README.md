@@ -1,5 +1,5 @@
 # PROYECTO_INDIVIDUAL_DIW_22-23_CarmenOrtiz
- ###Introducción
+ ### Introducción
  En este proyecto me he querido inspirar en la Gran Manzana, Nueva York.
  Una de las ciudades que más me gustan y más interesantes del mundo en mi opinión.
  Y en está ocasión, me ha inspirado la noche de Nueva York.
@@ -24,12 +24,12 @@ comprobar el responsive y solucionar los problemas que iban surgiendo en las dif
 Respecto al carrusel, es sencillo pero he querido hacerlo con html y sass exclusivamente, sin usar boostrap, ya que me apetecía aprender a hacer uno por mi misma. Además, le he dado su funcionalidad usando JavaScript.
 Otro elemento introducido en la Web, ha sido el botón que va hacia arriba, y su funcionalidad también la he hecho con JavaScript.
 ### Recursos
-[Para las imagenes](https://www.pexels.com/search/mask/)
-[Para iconos](https://icons.getbootstrap.com/)
-[Para retocar imagenes](https://www.befunky.com/es/opciones/editor-de-fotos/)
+* [Para las imagenes](https://www.pexels.com/search/mask/)
+* [Para iconos](https://icons.getbootstrap.com/)
+* [Para retocar imagenes](https://www.befunky.com/es/opciones/editor-de-fotos/)
 ### Inspiración
-[Sobre Nueva York](https://www.nuevayork.net/)
-[Más de Nueva York](https://es.nycgo.com/?cid=brandusa_website_nycpage_exploremore_20170511)
+* [Sobre Nueva York](https://www.nuevayork.net/)
+* [Más de Nueva York](https://es.nycgo.com/?cid=brandusa_website_nycpage_exploremore_20170511)
   
 
 
