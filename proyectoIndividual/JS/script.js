@@ -24,13 +24,13 @@ punto.forEach((cadaPunto, i) => {
   });
 });
 
+// JS PARA EL BOTON RESPONSIVE DEL MENU
 // cuando haga click le añado y quito la clase
 const btnMenu = document.querySelector(".button_responsive");
 const navegador = document.querySelector(".header__nav_lista");
 
 btnMenu.addEventListener("click", (e) => {
   e.preventDefault();
-  console.log("hola");
   navegador.classList.toggle("header__nav_lista--ver");
 });
 
