@@ -12,7 +12,6 @@ body {
 
 .header {
     background-image: url("../assets/img/nochemod2.jpg");
-    // clip-path: ellipse(60% 80% at 50% 10%);
     @include l.flexSeparado(column, nowrap);
 
     @include l.movil {
@@ -20,11 +19,11 @@ body {
     }
 
     @include l.tablet {
-        clip-path: ellipse(80% 80% at 50% 10%);
+        clip-path: ellipse(80% 90% at 50% 10%);
     }
 
     @include l.desktop {
-        clip-path: ellipse(60% 80% at 50% 10%);
+        clip-path: ellipse(60% 90% at 50% 10%);
     }
 }
 
@@ -49,13 +48,14 @@ body {
 }
 
 .boton_menu {
-    width: 3em;
-    height: 3em;
+    width: 4em;
+    height: 4em;
 
 }
 
 .header__nav {
     width: 100%;
+    background: linear-gradient(l.$azulnoche, #91650752, l.$azulnoche);
     background-color: l.$azulnoche;
     padding: 1rem;
     @include l.flexSeparado(row, wrap);
@@ -118,7 +118,6 @@ body {
             &_link {
                 text-decoration: l.$decoracion;
                 color: l.$verde;
-                text-shadow: 1px 1px 2px#e2d28c;
 
                 @include l.movil {
                     font-size: 0.8em;
@@ -183,6 +182,7 @@ body {
         text-align: left;
         font-size: 1rem;
 
+
         @include l.movil {
             width: 20rem;
         }
@@ -195,6 +195,7 @@ body {
             width: 100%;
             display: grid;
             grid-template-columns: 50% 1fr;
+
         }
 
         &_p {
@@ -204,11 +205,42 @@ body {
             background: linear-gradient(#010c55da, #665e3b2c, #010c55da);
             background-color: #010c55da;
             border-radius: map-get(l.$bordes, radius);
-            box-shadow: 10px 10px 20px #050e4765, -10px -10px 20px #050e4796;
-
+            // box-shadow: 10px 10px 20px #050e4765, -10px -10px 20px #050e4796;
+            box-shadow: -5px -5px 15px #101536ee, inset -5px -5px 15px #101536ee, inset 5px 5px 15px #05070fd0,
+                inset 5px 5px 10px rgb(81, 93, 133), inset -5px -5px 10px rgba(98, 132, 235, 0.932);
         }
     }
 }
+
+.carrusel {
+    width: 75vh;
+    background-color: #9c872A;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+
+
+    &__ver {
+        @include l.flexCenter(row, nowrap);
+        width: calc(12.5rem * 16);
+        @include l.keyframes;
+
+    }
+
+    &__grande {
+        width: 12.5rem;
+        transition: all 1.5s linear;
+
+        &_text {
+            width: 100%;
+            color: #051644;
+            font-weight: 900;
+            @include l.flexCenter(row, nowrap);
+        }
+    }
+
+}
+
 
 .main__section2 {
     @include l.flexCenter(column, nowrap);
@@ -232,6 +264,7 @@ body {
             color: l.$verde;
         }
     }
+
 
     &_col {
         padding-bottom: 1em;
@@ -289,6 +322,13 @@ body {
                     border-radius: map-get(l.$bordes, radius);
                     box-shadow: -20px -20px 40px l.$azulnoche;
 
+                    &:hover {
+                        border-bottom-right-radius: 50px;
+                        border-top-left-radius: 50px;
+                        transform: scale(1.05);
+                        transition: all 0.7s;
+                    }
+
                 }
 
                 &_caja {
@@ -309,6 +349,8 @@ body {
 
                     &:hover {
                         color: l.$verde;
+                        transform: scale(1.5);
+                        transition: all 0.7s;
                     }
                 }
             }
@@ -355,6 +397,13 @@ body {
                     object-fit: cover;
                     border-radius: map-get(l.$bordes, radius);
                     box-shadow: -20px -20px 40px l.$azulnoche;
+
+                    &:hover {
+                        border-bottom-right-radius: 50px;
+                        border-top-left-radius: 50px;
+                        transform: scale(1.05);
+                        transition: all 0.7s;
+                    }
                 }
 
                 &_caja {
@@ -375,6 +424,9 @@ body {
 
                     &:hover {
                         color: l.$verde;
+                        transform: scale(1.5);
+                        transition: all 0.7s;
+
                     }
                 }
 
@@ -434,8 +486,8 @@ body {
     }
 
     &__grande {
-        width: 300%;
-        transition: all .5s ease;
+        width: 400%;
+        transition: all 1.5s linear;
         transform: translateX(0);
         @include l.flexCenter(row, nowrap);
 
@@ -510,22 +562,12 @@ body {
 }
 
 .ir_arriba {
-    width: 3rem;
-    height: 3rem;
+    width: 2rem;
+    height: 2rem;
     display: block;
     color: l.$verde;
     cursor: pointer;
     position: fixed;
-    bottom: 10em;
-    right: 2em;
-
-    @include l.movil {
-        width: 2rem;
-        height: 2rem;
-    }
-
-    @include l.desktop {
-        width: 3rem;
-        height: 3rem;
-    }
+    bottom: 9em;
+    right: 1em;
 }

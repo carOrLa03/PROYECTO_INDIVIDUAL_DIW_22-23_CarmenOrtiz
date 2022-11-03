@@ -15,7 +15,7 @@ punto.forEach((cadaPunto, i) => {
     // si posicion es 1 transformX es -33%
 
     let posicion = i;
-    let operacion = posicion * -33.33;
+    let operacion = posicion * -25;
     grande.style.transform = `translateX(${operacion}%)`;
     punto.forEach((cadaPunto, i) => {
       punto[i].classList.remove("activo");

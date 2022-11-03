@@ -25,44 +25,67 @@ $morado: #0b0e20;
 $decoracion: none;
 
 // MIXINS
-@mixin flexCenter($direction, $wrap){
+@mixin flexCenter($direction, $wrap) {
     display: flex;
     flex-flow: $direction $wrap;
     justify-content: center;
     align-items: center;
 }
-@mixin flexSeparado($direccion, $wrap){
+
+@mixin flexSeparado($direccion, $wrap) {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
 }
-@mixin neo($radius, $eje){
+
+@mixin neo($radius, $eje) {
     border-radius: $radius;
     background-color: rgb(9, 4, 78);
-    box-shadow: $eje $eje ($eje*2) rgb(34, 32, 32),
-                (-$eje) (-$eje) ($eje*2) rgb(117, 115, 115);
+    box-shadow: $eje $eje (
+        $eje*2) rgb(34, 32, 32),
+        (-$eje) (-$eje) ($eje*2) rgb(117, 115, 115
+    );
 }
 
-@mixin movil{
-    @media only screen and (min-width: 300px){
-        @content;
-    }
-}
-
-@mixin tablet{
-    @media only screen and (min-width: 650px){
-        @content;
-    }
-}
-@mixin desktop{
-    @media only screen and (min-width: 1024px){
-        @content;
-    }
-}
-@mixin large{
-    @media only screen and (min-width: 1440px){
+@mixin movil {
+    @media only screen and (min-width: 300px) {
         @content;
     }
 }
 
+@mixin tablet {
+    @media only screen and (min-width: 650px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media only screen and (min-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin large {
+    @media only screen and (min-width: 1440px) {
+        @content;
+    }
+}
+
+@mixin animate($animation, $duration, $method, $times) {
+    animation: $animation $duration $method $times;
+}
+
+@mixin keyframes {
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(calc(-12.5rem * 8));
+        }
+    }
+
+    @include animate(scroll, 20s, linear, infinite);
+}
