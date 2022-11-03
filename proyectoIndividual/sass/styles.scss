@@ -158,6 +158,7 @@ body {
 .main__section1 {
     text-align: center;
     width: 100%;
+    padding:0 4rem;
     @include l.flexCenter(column, nowrap);
 
     &_title {
@@ -212,33 +213,22 @@ body {
     }
 }
 
-.carrusel {
-    width: 75vh;
+.slider{
+    width: 100%;
     background-color: #9c872A;
     height: auto;
     margin: auto;
     overflow: hidden;
-
-
-    &__ver {
-        @include l.flexCenter(row, nowrap);
+    &__track{
+        @include l.flexSeparado(row, nowrap);
         width: calc(12.5rem * 16);
-        @include l.keyframes;
-
-    }
-
-    &__grande {
-        width: 12.5rem;
-        transition: all 1.5s linear;
-
-        &_text {
-            width: 100%;
-            color: #051644;
+         @include l.keyframes;
+        &_text{
+            color: #d4d4d1;
             font-weight: 900;
-            @include l.flexCenter(row, nowrap);
+            text-shadow:  0 0 30px rgb(228, 196, 129),0 0 30px rgb(238, 200, 120),0 0 20px rgb(201, 140, 10),0 0 10px rgb(224, 186, 103),0 0 5px rgb(226, 222, 214);
         }
     }
-
 }
 
 
@@ -249,7 +239,7 @@ body {
     &_title {
         font-family: map-get(l.$fuentes, titulo);
         text-decoration: l.$decoracion;
-        margin-bottom: 3em;
+        margin-bottom: 1em;
 
         @include l.movil {
             font-size: 2em;

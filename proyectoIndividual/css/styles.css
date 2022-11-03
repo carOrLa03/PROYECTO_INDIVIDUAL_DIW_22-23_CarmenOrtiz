@@ -170,6 +170,7 @@ body {
 .main__section1 {
   text-align: center;
   width: 100%;
+  padding: 0 4rem;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -227,17 +228,17 @@ body {
   box-shadow: -5px -5px 15px rgba(16, 21, 54, 0.9333333333), inset -5px -5px 15px rgba(16, 21, 54, 0.9333333333), inset 5px 5px 15px rgba(5, 7, 15, 0.8156862745), inset 5px 5px 10px rgb(81, 93, 133), inset -5px -5px 10px rgba(98, 132, 235, 0.932);
 }
 
-.carrusel {
-  width: 75vh;
+.slider {
+  width: 100%;
   background-color: #9c872A;
   height: auto;
   margin: auto;
   overflow: hidden;
 }
-.carrusel__ver {
+.slider__track {
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
+  flex-flow: row wrap;
+  justify-content: space-between;
   align-items: center;
   width: 200rem;
   animation: scroll 20s linear infinite;
@@ -250,18 +251,10 @@ body {
     transform: translateX(-100rem);
   }
 }
-.carrusel__grande {
-  width: 12.5rem;
-  transition: all 1.5s linear;
-}
-.carrusel__grande_text {
-  width: 100%;
-  color: #051644;
+.slider__track_text {
+  color: #d4d4d1;
   font-weight: 900;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
+  text-shadow: 0 0 30px rgb(228, 196, 129), 0 0 30px rgb(238, 200, 120), 0 0 20px rgb(201, 140, 10), 0 0 10px rgb(224, 186, 103), 0 0 5px rgb(226, 222, 214);
 }
 
 .main__section2 {
@@ -274,7 +267,7 @@ body {
 .main__section2_title {
   font-family: "Abril Fatface";
   text-decoration: none;
-  margin-bottom: 3em;
+  margin-bottom: 1em;
 }
 @media only screen and (min-width: 300px) {
   .main__section2_title {
